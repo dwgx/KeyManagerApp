@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+settings.dat
+data.dat
+salt.dat

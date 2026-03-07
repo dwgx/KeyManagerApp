@@ -16,15 +16,16 @@ from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 from cryptography.fernet import Fernet
 import secrets
 
-SETTINGS_FILE = "settings.dat"
-DATA_FILE = "data.dat"
-SALT_FILE = "salt.dat"
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+SETTINGS_FILE = os.path.join(APP_DIR, "settings.dat")
+DATA_FILE = os.path.join(APP_DIR, "data.dat")
+SALT_FILE = os.path.join(APP_DIR, "salt.dat")
 
 def load_font():
     font_path = ""
     possible_paths = [
         "C:\\Windows\\Fonts\\UDDIGIKYOKASHON-B.TTC",
-        os.path.join(os.getcwd(), "UDDIGIKYOKASHON-B.TTC")
+        os.path.join(APP_DIR, "UDDIGIKYOKASHON-B.TTC")
     ]
     for path in possible_paths:
         if os.path.exists(path):
