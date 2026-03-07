@@ -915,7 +915,7 @@ class PasswordManager(QWidget):
             self.account_display.setEchoMode(QLineEdit.Normal)
             self.account_toggle_btn.setIcon(QIcon("icons/view_visible.png"))  # 使用自定义图标
         else:
-            self.account_display.setEchoMode(QLineEdit.Normal)
+            self.account_display.setEchoMode(QLineEdit.Password)
             self.account_toggle_btn.setIcon(QIcon("icons/view_hidden.png"))  # 使用自定义图标
 
     def get_current_theme_stylesheet(self):
