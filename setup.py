@@ -1,20 +1,16 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    name='main',
-    version='0.1',
-    packages=find_packages(),
+    name="key-manager-app",
+    version="0.1.0",
+    py_modules=["main"],
     install_requires=[
-        'numpy',
-        'requests',
-        'PySide6',
-        'cryptography',
-        "pyinstaller",
+        "PySide6>=6.8.0",
+        "cryptography>=43.0.0",
     ],
+    python_requires=">=3.10",
     classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
     ],
-    include_package_data=True,  # 包括非代码文件（例如图标）
 )
