@@ -53,3 +53,14 @@ python main.py
 ```bash
 pip install -r requirements.txt
 ```
+
+## Trust Boundary
+
+KeyManagerApp stores sensitive information locally, so the trust model matters more than the UI.
+
+- The app is for local personal storage, not shared/team secret distribution.
+- Do not commit generated data files such as local databases, salts, exports, or backups.
+- Keep a separate encrypted backup before changing the storage format.
+- This project has not had a formal cryptography/security audit; use it with that limitation in mind.
+- Issues and screenshots must not include real account names, tokens, recovery codes, or passwords.
+
